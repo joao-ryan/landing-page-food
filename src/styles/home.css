@@ -1,0 +1,140 @@
+/* Seção Home */
+#home {
+  display: flex;
+  /* Flexbox para alinhar os elementos internos */
+  position: relative;
+  /* Permite usar top e left */
+  top: 5rem;
+  /* Distância do topo */
+  left: 3rem;
+  /* Distância da esquerda */
+  scale: 1.05;
+  /* Aumenta levemente o tamanho */
+}
+
+/* Banner principal */
+.banner {
+  width: 40%;
+  /* Largura do banner */
+  display: flex;
+  /* Flexbox */
+  align-items: center;
+  /* Alinha verticalmente ao centro */
+  gap: 1px;
+  /* Pequeno espaçamento interno */
+  padding: 40px 0;
+  /* Espaçamento vertical */
+}
+
+/* Pratos em destaque com posicionamento relativo */
+#prato1 {
+  position: relative;
+  top: -2rem;
+  /* Ajuste vertical */
+  left: 45rem;
+  /* Ajuste horizontal */
+  z-index: 3;
+  /* Fica na frente */
+}
+
+#prato2 {
+  position: relative;
+  top: -20rem;
+  /* Ajuste vertical */
+  left: 28rem;
+  /* Ajuste horizontal */
+  z-index: 2;
+  /* Camada intermediária */
+}
+
+#prato3 {
+  position: relative;
+  top: -20rem;
+  /* Ajuste vertical */
+  left: -21rem;
+  /* Ajuste horizontal */
+  z-index: 1;
+  /* Camada de fundo */
+}
+
+/* Botões de redes sociais */
+.social-media-buttons {
+  display: flex;
+  /* Flexbox para alinhar os botões */
+  gap: 30px;
+  /* Espaçamento entre os botões */
+  scale: 1.2;
+  /* Aumenta levemente o tamanho */
+  align-items: center;
+  /* Alinha verticalmente */
+  justify-content: center;
+  /* Centraliza horizontalmente */
+  position: relative;
+  /* Para usar left/bottom */
+  left: 4rem;
+  /* Ajuste horizontal */
+  bottom: 0.1rem;
+  /* Ajuste vertical */
+  padding: 10px;
+  /* Espaçamento interno */
+  cursor: pointer;
+  /* Cursor de clique */
+  transition: 0.4s;
+  /* Transição suave para hover */
+}
+
+/* Ícones das redes sociais */
+#fa-facebook,
+#fa-instagram,
+#fa-whatsapp {
+  color: #1d1d1d;
+  /* Cor do ícone */
+  background-color: aliceblue;
+  /* Fundo do botão */
+  padding: 0.8rem;
+  /* Espaçamento interno */
+  border-radius: 20px;
+  /* Bordas arredondadas */
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  /* Sombra leve */
+}
+
+/* Efeitos de hover para Facebook */
+#fa-facebook:hover {
+  color: #2b406e;
+  /* Cor do ícone ao passar o mouse */
+  background-color: #aee8e8;
+  /* Fundo ao passar o mouse */
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  /* Mantém sombra */
+}
+
+/* Efeitos de hover para Instagram */
+#fa-instagram:hover {
+  color: #e1306c;
+  background-color: #f7c1d1;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Efeitos de hover para WhatsApp */
+#fa-whatsapp:hover {
+  color: #25d366;
+  background-color: #c2f7d1;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Onda decorativa do site */
+#wave {
+  position: relative;
+  top: -35rem;
+  /* Ajuste vertical */
+  left: 0rem;
+  /* Ajuste horizontal */
+  z-index: 0;
+  /* Fica atrás de outros elementos */
+}
+
+/* Fundo do body com gradiente */
+body {
+  background: linear-gradient(180deg, #ffbb00 0%, #ff0000 50%);
+}

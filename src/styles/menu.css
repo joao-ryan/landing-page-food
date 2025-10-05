@@ -1,0 +1,165 @@
+/* Container geral dos pratos */
+.dishes {
+  display: flex;
+  /* Flexbox para organizar os pratos */
+  flex-wrap: wrap;
+  /* Permite quebra de linha quando não cabe tudo */
+  justify-content: center;
+  /* Centraliza os pratos horizontalmente */
+  gap: 20px;
+  /* Espaçamento entre os pratos */
+  padding: 20px;
+  /* Espaçamento interno */
+  background-color: #303030;
+  /* Cor de fundo escura */
+  border-radius: 12px;
+  /* Bordas arredondadas */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  /* Sombra leve */
+}
+
+/* Seção do menu */
+#menu {
+  display: flex;
+  flex-direction: column;
+  /* Empilha verticalmente */
+  align-items: center;
+  /* Centraliza horizontalmente */
+  justify-content: center;
+  /* Centraliza verticalmente */
+  min-height: 100vh;
+  /* Ocupa altura total da tela */
+  position: relative;
+  /* Para poder usar left/top */
+  left: -113rem;
+  /* Ajuste horizontal */
+  top: 22rem;
+  /* Ajuste vertical */
+}
+
+/* Container de pratos específico */
+#pratos {
+  position: relative;
+  left: -1rem;
+  /* Pequeno deslocamento à esquerda */
+  width: 110.5%;
+  /* Largura maior que 100% para efeito visual */
+  padding: 7rem 1.2rem;
+  /* Espaçamento interno vertical e horizontal */
+  display: flex;
+  /* Flexbox para organizar os pratos */
+  justify-content: center;
+  /* Centraliza horizontalmente */
+  gap: 24px;
+  /* Espaçamento entre pratos */
+  margin-top: 32px;
+  /* Distância do conteúdo acima */
+  background-color: rgb(61, 61, 61);
+  /* Cor de fundo */
+}
+
+/* Cada prato individual */
+.prato {
+  display: flex;
+  flex-direction: column;
+  /* Empilha conteúdo verticalmente */
+  align-items: center;
+  /* Centraliza conteúdo horizontalmente */
+  border-radius: 20px;
+  /* Bordas arredondadas */
+  gap: 18px;
+  /* Espaçamento interno entre elementos do prato */
+  width: 25%;
+  /* Largura do prato */
+  padding: 20px;
+  /* Espaçamento interno */
+  background: linear-gradient(180deg, #ffffff 0%, #c7c5be 100%);
+  /* Gradiente de fundo */
+  box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+  /* Sombra do prato */
+  position: relative;
+  /* Para posicionamento de elementos internos */
+  overflow: hidden;
+  /* Esconde conteúdos que ultrapassem o box */
+}
+
+/* Símbolo dentro do prato (ex: ícone) */
+.prato-simbolo {
+  position: absolute;
+  /* Posicionamento absoluto dentro do prato */
+  background-color: var(--color-primary-6);
+  /* Cor de fundo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.563rem;
+  /* Tamanho da fonte */
+  color: var(--color-primary-1);
+  /* Cor do ícone */
+  width: 70px;
+  height: 70px;
+  right: -10px;
+  /* Ajuste para fora da borda */
+  top: -10px;
+  /* Ajuste para fora da borda */
+  border-radius: 0px 37.5px 0px 42.5px;
+  /* Bordas arredondadas específicas */
+}
+
+/* Descrição do prato */
+.prato-descricao {
+  color: #434343;
+  /* Cor do texto */
+  text-align: center;
+  /* Centraliza texto */
+}
+
+/* Títulos do menu */
+.tittles-menu {
+  color: white;
+  /* Cor do texto */
+  position: relative;
+  /* Para ajustar top */
+  top: 7rem;
+  /* Distância do topo */
+  z-index: 6;
+  /* Mantém à frente de outros elementos */
+}
+
+/* Preço do prato */
+.prato-preco {
+  display: flex;
+  /* Flexbox */
+  align-items: center;
+  /* Alinha verticalmente */
+  gap: 20px;
+  /* Espaçamento entre elementos (ex: preço e ícone) */
+}
+
+/* Responsivo: telas até 1170px */
+@media screen and (max-width: 1170px) {
+  #pratosw {
+    flex-wrap: wrap;
+    /* Permite quebra de linha */
+    justify-content: center;
+    /* Centraliza os pratos */
+  }
+
+  .prato {
+    width: calc(50% - 12px);
+    /* Ocupa metade da largura menos gap */
+  }
+}
+
+/* Responsivo: telas até 600px */
+@media screen and (max-width: 600px) {
+  .prato {
+    width: 100%;
+    /* Ocupa toda a largura disponível */
+  }
+
+  #menu .section-subtitle {
+    text-align: center;
+    /* Centraliza subtítulo em telas pequenas */
+  }
+}

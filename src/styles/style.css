@@ -1,0 +1,122 @@
+/* Importa a fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Zalando+Sans+SemiExpanded:ital,wght@0,200..900;1,200..900&display=swap');
+
+/* Reset básico e aplicação da fonte padrão */
+* {
+  margin: 0;
+  /* Remove margens padrão */
+  padding: 0;
+  /* Remove padding padrão */
+  box-sizing: border-box;
+  /* Inclui padding e border no tamanho do elemento */
+  font-family: 'Zalando Sans SemiExpanded', sans-serif;
+  /* Fonte padrão */
+}
+
+/* Configurações gerais do HTML e body */
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  /* Evita barra de rolagem horizontal */
+  font-family: Arial, sans-serif;
+  /* Fonte de fallback */
+}
+
+/* Espaçamento interno para todas as seções */
+section {
+  padding: 28px 8%;
+  /* 28px vertical, 8% horizontal */
+}
+
+/* Estilo geral de botões */
+.btn-default {
+  border: none;
+  /* Remove borda padrão */
+  display: flex;
+  /* Flexbox para centralizar conteúdo */
+  align-items: center;
+  /* Alinha verticalmente ao centro */
+  justify-content: Center;
+  /* Alinha horizontalmente ao centro */
+  background-color: #ffb700;
+  /* Cor de fundo */
+  border-radius: 12px;
+  /* Bordas arredondadas */
+  padding: 10px 14px;
+  /* Espaçamento interno */
+  font-weight: 600;
+  /* Peso da fonte */
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  /* Sombra leve */
+  cursor: pointer;
+  /* Cursor de clique */
+  transition: 0.4s;
+  /* Transição suave para hover */
+}
+
+/* Container de botões CTA (call to action) */
+#cta-buttons {
+  gap: 24px;
+  /* Espaço entre os botões */
+  margin-top: 24px;
+  /* Distância do conteúdo acima */
+  width: 50%;
+  /* Largura do container */
+  display: flex;
+  /* Flexbox */
+}
+
+/* Link para Cardápio */
+#Cardapio {
+  text-decoration: none;
+  /* Remove sublinhado padrão */
+  color: black;
+  /* Cor do texto */
+  padding: 0 30px;
+  /* Espaçamento horizontal */
+  border-radius: 12px;
+  /* Bordas arredondadas */
+}
+
+/* Botão de telefone */
+#phone-button {
+  text-decoration: none;
+  /* Remove sublinhado */
+  color: black;
+  /* Cor do texto */
+  padding: 8px 12px;
+  /* Espaçamento interno */
+  border-radius: 12px;
+  /* Bordas arredondadas */
+}
+
+/* Container principal do CTA */
+#cta {
+  display: flex;
+  /* Flexbox */
+  flex-direction: column;
+  /* Empilha verticalmente */
+  align-items: flex-start;
+  /* Alinha à esquerda */
+  gap: 16px;
+  /* Espaço entre elementos */
+  width: 40%;
+  /* Largura do container */
+}
+
+/* Efeito de hover nos botões */
+.btn-default:hover {
+  background-color: #e6a200;
+  /* Escurece o botão ao passar o mouse */
+}
+
+/* Estilo para spans específicos */
+span {
+  color: #ffb300;
+  /* Cor do texto */
+  font-weight: 700;
+  /* Negrito */
+  text-decoration: underline;
+  /* Sublinhado */
+}

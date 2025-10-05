@@ -1,0 +1,189 @@
+/* ====== NAVBAR ====== */
+/* Container principal da barra de navegação */
+#navbar {
+  display: flex;
+  /* Flexbox para alinhar conteúdo horizontalmente */
+  justify-content: space-between;
+  /* Espaço entre logo e links */
+  align-items: center;
+  /* Centraliza verticalmente */
+  background-color: #fff;
+  /* Fundo branco */
+  padding: 10px 50px;
+  /* Espaçamento interno */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  /* Sombra leve */
+  position: sticky;
+  /* Fixa no topo ao rolar a página */
+  top: 0;
+  /* Topo da tela */
+  z-index: 1000;
+  /* Mantém à frente dos outros elementos */
+  font-family: Arial, sans-serif;
+  /* Fonte padrão */
+}
+
+/* ====== LOGO ====== */
+/* Estilo do logo */
+#logo-nav {
+  font-size: 1.6rem;
+  /* Tamanho da fonte */
+  color: #000;
+  /* Cor do texto */
+  font-weight: bold;
+  /* Negrito */
+  transition: transform 0.3s ease;
+  /* Transição suave para hover */
+  display: inline-block;
+  /* Necessário para aplicar transformações */
+}
+
+/* Hover no logo */
+#logo-nav:hover {
+  transform: scale(1.1);
+  /* Aumenta o logo */
+  color: #ffb700;
+  /* Muda a cor */
+  text-shadow: 0 0 5px rgba(255, 183, 0, 0.7);
+  /* Sombra do texto */
+  border-bottom: 2px solid #ffb700;
+  /* Linha inferior */
+}
+
+/* ====== LINKS ====== */
+/* Lista de links da navbar */
+#nav-lista {
+  list-style: none;
+  /* Remove marcadores */
+  display: flex;
+  /* Flexbox para links */
+  align-items: center;
+  /* Alinha verticalmente */
+  gap: 30px;
+  /* Espaçamento entre links */
+  margin: 0;
+  /* Remove margem */
+  padding: 0;
+  /* Remove padding */
+}
+
+/* Estilo dos links */
+#nav-lista a {
+  text-decoration: none;
+  /* Remove sublinhado */
+  color: #333;
+  /* Cor do texto */
+  font-weight: 500;
+  /* Peso da fonte */
+  transition: color 0.3s, transform 0.3s;
+  /* Transição suave */
+}
+
+/* Hover nos links */
+#nav-lista a:hover {
+  color: #ffb700;
+  /* Cor ao passar o mouse */
+  transform: translateY(-2px);
+  /* Sobe levemente */
+  border-bottom: 2px solid #ffb700;
+  /* Linha inferior */
+}
+
+/* ====== BOTÃO DE PEDIDO ====== */
+.btn-default {
+  background-color: #ffb700;
+  /* Cor de fundo */
+  color: #fff;
+  /* Cor do texto */
+  border: none;
+  /* Sem borda */
+  padding: 10px 18px;
+  /* Espaçamento interno */
+  border-radius: 20px;
+  /* Bordas arredondadas */
+  cursor: pointer;
+  /* Cursor de clique */
+  font-weight: bold;
+  /* Negrito */
+  transition: all 0.3s ease;
+  /* Transição suave */
+}
+
+/* Hover do botão */
+.btn-default:hover {
+  background-color: #e0a000;
+  /* Escurece ao passar o mouse */
+  transform: scale(1.05);
+  /* Aumenta levemente */
+}
+
+/* ====== MENU MOBILE ====== */
+/* Botão do menu mobile (hamburger) */
+#menu-mobile {
+  display: none;
+  /* Inicialmente escondido */
+  background: none;
+  /* Sem fundo */
+  border: none;
+  /* Sem borda */
+  font-size: 1.5rem;
+  /* Tamanho do ícone */
+  color: #000;
+  /* Cor do ícone */
+  cursor: pointer;
+  /* Cursor de clique */
+}
+
+/* ====== RESPONSIVIDADE ====== */
+@media (max-width: 768px) {
+
+  /* Navbar para telas menores */
+  #nav-lista {
+    position: absolute;
+    /* Fica sobre outros elementos */
+    top: 70px;
+    /* Distância do topo */
+    right: 0;
+    /* Alinhado à direita */
+    background-color: #fff;
+    /* Fundo branco */
+    flex-direction: column;
+    /* Links empilhados verticalmente */
+    width: 100%;
+    /* Ocupa toda a largura */
+    text-align: center;
+    /* Centraliza links */
+    padding: 20px 0;
+    /* Espaçamento vertical */
+    gap: 20px;
+    /* Espaçamento entre links */
+    display: none;
+    /* Inicialmente escondido */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    /* Sombra leve */
+  }
+
+  /* Mostra o menu quando ativo */
+  #nav-lista.active {
+    display: flex;
+    /* Mostra os links */
+    animation: slideDown 0.3s ease forwards;
+    /* Animação de entrada */
+  }
+
+  /* Animação do slide down */
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+      /* Começa levemente acima */
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+      /* Termina na posição correta */
+    }
+  }
+
+  ;
